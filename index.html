@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House Warming Invitation</title>
+    <title>House Warming Invitation - सूर्यचंद्रशिला</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Karma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -397,6 +397,96 @@
             vertical-align: middle;
         }
         
+        /* House name styling */
+        .house-name-container {
+            position: relative;
+            margin-bottom: 20px;
+            padding: 15px 0;
+        }
+        
+        .house-name {
+            font-family: 'Karma', serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--maroon);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .house-name-decoration {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            width: 80%;
+            left: 10%;
+        }
+        
+        .house-name-decoration-top {
+            top: -5px;
+        }
+        
+        .house-name-decoration-bottom {
+            bottom: -5px;
+        }
+        
+        .house-name-icon {
+            display: inline-block;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+        
+        .family-members {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .family-member {
+            text-align: center;
+            padding: 5px;
+        }
+        
+        /* Direction button styling */
+        .direction-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--gold), var(--saffron));
+            color: white;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .direction-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
+        }
+        
+        .direction-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 5px rgba(212, 175, 55, 0.3);
+        }
+        
+        .direction-btn svg {
+            margin-right: 8px;
+        }
+        
+        .direction-btn-container {
+            text-align: center;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 10;
+        }
+        
         /* Mobile Optimizations */
         @media (max-width: 640px) {
             .container {
@@ -493,6 +583,19 @@
                 font-size: 2rem;
                 margin: 0 5px;
             }
+            
+            .house-name {
+                font-size: 1.5rem;
+            }
+            
+            .family-members {
+                grid-template-columns: 1fr;
+            }
+            
+            .direction-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
         }
         
         /* Tablet Optimizations */
@@ -511,6 +614,10 @@
             
             .diya {
                 transform: scale(0.9);
+            }
+            
+            .house-name {
+                font-size: 2rem;
             }
         }
         
@@ -605,6 +712,23 @@
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <path fill="#FF9933" d="M50 0 C60 30 70 40 100 50 C70 60 60 70 50 100 C40 70 30 60 0 50 C30 40 40 30 50 0"/>
                 </svg>
+            </div>
+            
+            <!-- House Name -->
+            <div class="house-name-container">
+                <div class="house-name-decoration house-name-decoration-top"></div>
+                <span class="house-name-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                        <path d="M12 3L2 12h3v8h14v-8h3L12 3z" stroke="#D4AF37"/>
+                    </svg>
+                </span>
+                <h2 class="house-name text-2xl sm:text-3xl md:text-4xl">सूर्यचंद्रशिला</h2>
+                <span class="house-name-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                        <path d="M12 3L2 12h3v8h14v-8h3L12 3z" stroke="#D4AF37"/>
+                    </svg>
+                </span>
+                <div class="house-name-decoration house-name-decoration-bottom"></div>
             </div>
             
             <h1 class="tangerine text-5xl sm:text-6xl md:text-7xl font-bold mb-3 sm:mb-4" style="color: var(--maroon);">You're Invited</h1>
@@ -714,7 +838,7 @@
                                 <h3 class="font-bold">Location</h3>
                                 <p>I-602, ABH Treeland</p>
                                 <p>In front of Hari Om Dhabha</p>
-                                <p>Gangapur Road</p>
+                                <p>Gangapur Road, Nashik</p>
                             </div>
                         </div>
                     </div>
@@ -787,8 +911,8 @@
                 </iframe>
                 </div>
         </div>
-
-         <!-- Get Directions Button -->
+                
+                <!-- Get Directions Button -->
                 <div class="direction-btn-container">
                     <a href="https://goo.gl/maps/ABHTreelandNashik" target="_blank" rel="noopener noreferrer" class="direction-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -799,7 +923,6 @@
                 </div>
             </div>
         </div>
-
         
         <!-- Footer Message -->
         <div class="section text-center mb-6 sm:mb-8">
@@ -933,5 +1056,5 @@
             lastTouchEnd = now;
         }, false);
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'94136be9070d441b',t:'MTc0NzQ4ODEyNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9413c61a32fe1da9',t:'MTc0NzQ5MTgxOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
